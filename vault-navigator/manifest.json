@@ -1,0 +1,9 @@
+{
+	"id": "vault-navigator",
+	"name": "Vault Navigator",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "A compact file tree with folder pinning, recency sorting, file counts, auto-collapse, and inline filtering.",
+	"author": "You",
+	"isDesktopOnly": false
+}

@@ -1,0 +1,264 @@
+/* Vault Navigator – Redesigned */
+
+.vault-nav-container {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow: hidden;
+}
+
+/* ── Search ── */
+.vault-nav-search {
+	padding: 6px 8px;
+	border-bottom: 1px solid var(--background-modifier-border);
+	flex-shrink: 0;
+}
+
+.vault-nav-search-input {
+	width: 100%;
+	padding: 5px 8px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 4px;
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: 12px;
+	outline: none;
+}
+
+.vault-nav-search-input:focus {
+	border-color: var(--interactive-accent);
+}
+
+/* ── Scrollable area ── */
+.vault-nav-scroll {
+	flex: 1;
+	overflow-y: auto;
+	padding-bottom: 20px;
+}
+
+/* ── Sections ── */
+.vault-nav-section {
+	border-bottom: 1px solid var(--background-modifier-border);
+	padding-bottom: 4px;
+	margin-bottom: 2px;
+}
+
+.vault-nav-section:last-child {
+	border-bottom: none;
+}
+
+.vault-nav-section-header {
+	padding: 8px 12px 4px;
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--text-faint);
+	user-select: none;
+}
+
+.vault-nav-section-list {
+	padding: 0 4px;
+}
+
+.vault-nav-tree-label {
+	padding: 6px 12px 2px;
+	font-size: 10px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	color: var(--text-faint);
+	user-select: none;
+}
+
+.vault-nav-empty {
+	padding: 12px;
+	color: var(--text-faint);
+	font-size: 12px;
+	text-align: center;
+}
+
+/* ── Row base ── */
+.vault-nav-row {
+	display: flex;
+	align-items: center;
+	padding: 3px 8px;
+	cursor: pointer;
+	border-radius: 4px;
+	margin: 0 4px;
+	user-select: none;
+	gap: 4px;
+	min-height: 26px;
+}
+
+.vault-nav-row:hover {
+	background: var(--background-modifier-hover);
+}
+
+.vault-nav-active {
+	background: var(--background-modifier-active-hover);
+	border-left: 2px solid var(--interactive-accent);
+}
+
+.vault-nav-pinned {
+	border-left: 2px solid var(--interactive-accent);
+}
+
+/* ── Star (favorite toggle) ── */
+.vault-nav-star {
+	width: 16px;
+	text-align: center;
+	font-size: 11px;
+	color: var(--text-faint);
+	cursor: pointer;
+	flex-shrink: 0;
+	opacity: 0;
+	transition: opacity 0.15s;
+}
+
+.vault-nav-row:hover .vault-nav-star,
+.vault-nav-star-active {
+	opacity: 1;
+}
+
+.vault-nav-star-active {
+	color: #f5a623;
+}
+
+.vault-nav-star:hover {
+	color: #f5a623;
+	opacity: 1;
+}
+
+/* ── Chevron ── */
+.vault-nav-chevron {
+	width: 14px;
+	text-align: center;
+	font-size: 10px;
+	color: var(--text-faint);
+	flex-shrink: 0;
+}
+
+/* ── Icon ── */
+.vault-nav-icon {
+	font-size: 12px;
+	flex-shrink: 0;
+	width: 16px;
+	text-align: center;
+}
+
+/* ── Name ── */
+.vault-nav-name-container {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-width: 0;
+}
+
+.vault-nav-name {
+	flex: 1;
+	font-size: 13px;
+	color: var(--text-normal);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.vault-nav-folder .vault-nav-name {
+	font-weight: 500;
+}
+
+.vault-nav-path-hint {
+	font-size: 10px;
+	color: var(--text-faint);
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+/* ── Count badge ── */
+.vault-nav-count {
+	font-size: 10px;
+	color: var(--text-faint);
+	background: var(--background-modifier-border);
+	padding: 0 5px;
+	border-radius: 8px;
+	flex-shrink: 0;
+	line-height: 16px;
+}
+
+/* ── Compact mode ── */
+.vault-nav-compact .vault-nav-row {
+	min-height: 22px;
+	padding: 1px 8px;
+}
+
+.vault-nav-compact .vault-nav-name {
+	font-size: 12px;
+}
+
+.vault-nav-compact .vault-nav-icon {
+	font-size: 11px;
+	width: 14px;
+}
+
+.vault-nav-compact .vault-nav-chevron {
+	width: 12px;
+	font-size: 9px;
+}
+
+.vault-nav-compact .vault-nav-star {
+	width: 14px;
+	font-size: 10px;
+}
+
+/* ── Hover preview tooltip ── */
+.vault-nav-preview {
+	position: fixed;
+	z-index: 9999;
+	width: 280px;
+	max-height: 200px;
+	background: var(--background-primary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+	pointer-events: none;
+}
+
+.vault-nav-preview-title {
+	padding: 6px 10px 4px;
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--text-normal);
+	border-bottom: 1px solid var(--background-modifier-border);
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.vault-nav-preview-content {
+	padding: 6px 10px 8px;
+	font-size: 11px;
+	line-height: 1.5;
+	color: var(--text-muted);
+	white-space: pre-wrap;
+	word-break: break-word;
+	overflow: hidden;
+	max-height: 150px;
+}
+
+/* ── Scrollbar ── */
+.vault-nav-scroll::-webkit-scrollbar {
+	width: 5px;
+}
+
+.vault-nav-scroll::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.vault-nav-scroll::-webkit-scrollbar-thumb {
+	background: var(--background-modifier-border);
+	border-radius: 3px;
+}
