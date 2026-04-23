@@ -1,0 +1,9 @@
+{
+	"id": "folder-toc",
+	"name": "Folder Table of Contents",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "Automatically creates and maintains a table of contents file in every folder, keeping your graph connected.",
+	"author": "You",
+	"isDesktopOnly": false
+}
