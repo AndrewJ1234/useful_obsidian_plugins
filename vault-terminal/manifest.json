@@ -1,0 +1,9 @@
+{
+	"id": "vault-terminal",
+	"name": "Vault Terminal",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "A terminal interface for your vault. Create files, navigate folders, and manage your vault with shell commands.",
+	"author": "You",
+	"isDesktopOnly": false
+}
