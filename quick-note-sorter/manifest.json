@@ -1,0 +1,9 @@
+{
+	"id": "quick-note-sorter",
+	"name": "Quick Note Sorter",
+	"version": "1.0.0",
+	"minAppVersion": "1.0.0",
+	"description": "Quickly capture notes and sort them into categorized folders. Includes keyword-based auto-suggestion and batch inbox sorting.",
+	"author": "You",
+	"isDesktopOnly": false
+}
